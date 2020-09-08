@@ -1,0 +1,20 @@
+
+\usepackage{fancyhdr}
+
+\makeatletter
+\def\secondpage{\clearpage\null\vfill
+\pagestyle{empty}
+\begin{minipage}[b]{0.9\textwidth}
+\footnotesize\raggedright
+\setlength{\parskip}{0.5\baselineskip}
+Πνευματικά δικαιώματα \copyright 2016--\the\year\ \@author\par
+ISBN: 9786188242357
+\end{minipage}
+\vspace*{2\baselineskip}
+\cleardoublepage
+\rfoot{\thepage}}
+\makeatother
+
+\makeatletter
+\g@addto@macro{\maketitle}{\secondpage}
+\makeatother

@@ -1,0 +1,36 @@
+% pibook template
+
+% titlepages style
+\newlength{\drop}% for my convenience
+\pagestyle{empty}
+%titleS
+\newcommand*{\titleS}{\begingroup% Scripts, T&H p 151
+\drop = 0.1\textheight
+\centering
+\vspace*{\drop}
+{\Huge \@title}\\[\baselineskip]
+{\large\itshape \@author}\\[\baselineskip]
+\vfill
+\rule{0.4\textwidth}{0.4pt}\\[\baselineskip]
+{\large\itshape \@date}\par
+\vspace*{\drop}
+\endgroup}
+
+% copyright style
+\usepackage{fancyhdr}
+
+\def\secondpage{\clearpage\null\vfill
+\pagestyle{empty}
+\begin{minipage}[b]{0.9\textwidth}
+\footnotesize\raggedright
+\setlength{\parskip}{0.5\baselineskip}
+Πνευματικά δικαιώματα \copyright 2016--\the\year\ \@author\par
+ISBN: 9786188242357
+\end{minipage}
+\vspace*{2\baselineskip}
+\cleardoublepage
+\rfoot{\thepage}}
+
+\g@addto@macro{\maketitle}{\secondpage}
+
+\endinput

@@ -1,0 +1,18 @@
+% titlepages style
+\newlength{\drop}% for my convenience
+\pagestyle{empty}%
+%titleS
+\newcommand*{\titleS}{
+  \begingroup% Scripts, T&H p 151
+    \drop = 0.1\textheight%
+    \centering%
+    \vspace*{\drop}%
+    {\Huge \@title}\\[\baselineskip]%
+    {\large\itshape \@author}\\[\baselineskip]%
+    \vfill%
+    \rule{0.4\textwidth}{0.4pt}\\[\baselineskip]%
+    {\large\itshape \@date}\par%
+    \vspace*{\drop}%
+  \endgroup%
+}%
+\endinput
