@@ -37,6 +37,10 @@
 \usepackage[protrusion=true,final]{microtype}
 \usepackage{hyperref}
 
+% Appendix label
+\renewcommand{\appendixtocname}{Παράρτημα}
+\renewcommand{\appendixpagename}{Παράρτημα}
+
 % epigraphs
 \usepackage{epigraph}
 \newcommand{\newchap}[5]{%
@@ -45,5 +49,7 @@
   \epigraphhead[#3]{\epigraph{#4}{\textsc{#5}}}%
   \undodrop%
 }%
+\renewcommand{\textflush}{flushright}
+\setlength{\epigraphwidth}{0.5\textwidth}
 
 \endinput
